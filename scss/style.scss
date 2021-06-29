@@ -18,7 +18,7 @@ html {
     
 }
 .container {
-    width: 1110px;
+    width: 1230px;
     padding: 0 1.5rem;
     margin: 0 auto;
 }
@@ -33,6 +33,7 @@ body {
     line-height: 1.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    color: #150C01;
 }
 
 .header__menu {
@@ -120,7 +121,9 @@ body {
 
 //features start 
 
-.features__title {
+.features__title,
+.menu__title,
+.takeaway__title {
     @include r500;
     font-size: 1.6rem;
     letter-spacing: 20%;
@@ -129,7 +132,9 @@ body {
     margin-bottom: 0.7rem;
     text-align: center;
 }
-.features__text {
+.features__text,
+.menu__text,
+.takeaway__text {
     @include p700;
     font-size: 3.1rem;
     color: #150c01;
@@ -179,6 +184,7 @@ body {
 // about start
 .about {
     margin-top: 12rem;
+    margin-bottom: 12rem;
 }
 .about__inner {
     display: flex;
@@ -228,4 +234,148 @@ body {
     background-color: #dc780b;
     border-radius: 5px;
     padding: 1rem 3rem;
+}
+
+// about ends
+
+// menu start
+
+.menu__text-small {
+    margin: 2.5rem auto 6rem auto;
+    text-align: center;
+    max-width: 75rem;
+    opacity: 0.7;
+}
+.menu__items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33%;
+    gap: 3rem;
+}
+.menu__item {
+    max-width: 36rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 7.5rem 1rem 1rem 1rem;
+}
+.menu__item-img {
+    width: 36rem;
+    height: 26.4rem;
+    background-image: url(../images/menu1.jpg);
+    background-size: cover;
+    border-radius: 7.5rem 1rem 7.5rem 0;
+}
+.menu__item-name {
+    @include p700;
+    font-size: 2.5rem;
+    line-height: 2.4rem;
+    margin: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.menu__item-description {
+    opacity: 0.7;
+    margin: 2rem 2.5rem;
+}
+.menu__item-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2.5rem 2.5rem 2.5rem;
+}
+.menu__item-add {
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: #fff;
+    background-color: #DC780B;
+}
+.menu__btn {
+    @include r500;
+    color: #DC780B;
+    padding: 1.2rem 3rem;
+    border: 1px solid rgba(220, 120, 11, 0.1);
+    border-radius: 0.5rem;
+}
+.btn__wrapper {
+    text-align: center;
+    margin-top: 6rem;
+}
+.checked {
+    color: #DC780B;
+}
+
+//menu end
+
+//takeaway start
+
+.takeaway {
+    margin-top: 10rem;
+    background-color: #FBF1E7;
+    height: 52rem;
+}
+.takeaway__inner {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 33rem;
+        height: 65rem;
+        background-image: url(../images/phone.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: 0;
+        top: -6.5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+.takeaway__info {
+    max-width: 55.5rem;
+    padding-top: 12rem;
+}
+.takeaway__title,
+.takeaway__text {
+    text-align: initial;
+}
+.takeaway__text-small {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    opacity: 0.7;
+}
+.takeaway__btn-ios{
+    position: relative;
+    @include r500;
+    background-color: #150c01;
+    color: #fff;
+    padding: 1rem 2.5rem 1rem 6rem;
+    border-radius: 5px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.2rem;
+        height: 2.6rem;
+        background-image: url(../images/ios.svg);
+        background-size: cover;
+        transform: translateY(-25%);
+        left: 3rem;
+    }
+}
+.takeaway__btn-android {
+    position: relative;
+    @include r500;
+    background-color: #fff;
+    padding: 1rem 2.5rem 1rem 6rem;
+    border-radius: 5px;
+    border: 1px solid rgba(220, 120, 11, 0.1);
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.3rem;
+        height: 2.5rem;
+        background-image: url(../images/google.svg);
+        background-size: cover;
+        transform: translateY(-25%);
+        left: 3rem;
+    }
+}
+.takeaway__img {
+    
 }
