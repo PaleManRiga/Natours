@@ -428,6 +428,11 @@ body {
       opacity: 0.7;
       text-transform: uppercase;
   }
+  .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: unset;
+      color: #000;
+      font-weight: 700;
+  }
 
 
   // finish arrows
