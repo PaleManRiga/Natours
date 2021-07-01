@@ -30,6 +30,21 @@
 }
 @media (max-width: 734px) {
     .header__menu {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        .active {
+            left: 0;
+        }
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
     }
 }

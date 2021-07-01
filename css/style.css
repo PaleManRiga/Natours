@@ -48,9 +48,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -66,12 +63,14 @@ body {
 
 .menu__list {
   display: inline-block;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  margin-right: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .menu__list li {
-  display: inherit;
+  display: inline;
 }
 
 .menu__list li + li {
@@ -84,6 +83,20 @@ body {
   border-radius: 0.5rem;
   color: #fff;
   font-size: 1.6rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
 .hero__inner {

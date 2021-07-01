@@ -27,7 +27,26 @@
 
 @media (max-width: 734px) {
   .header__menu {
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .header__menu .active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=media.css.map */
